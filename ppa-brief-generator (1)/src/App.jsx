@@ -4,8 +4,8 @@ const DEFAULT_DEAL = {
   // Project Details
   projectName: "North Sea Offshore Wind",
   technology: "Offshore Wind",
-  capacityMW: 402,
-  annualGenerationGWh: 1400,
+  capacityMW: 400,
+  annualGenerationGWh: 1370,
   location: "UK North Sea",
   codDate: "Q3 2027",
 
@@ -18,10 +18,10 @@ const DEFAULT_DEAL = {
   settlementFrequency: "Monthly",
 
   // Counterparties
-  generatorName: "Danske Commodities",
-  generatorParent: "Equinor",
+  generatorName: "{Generator name}",
+  generatorParent: "{Generator Parent}",
   generatorCreditRating: "Investment Grade (A-)",
-  offtakerName: "Octopus Energy",
+  offtakerName: "{Offtaker}",
   offtakerCreditRating: "Investment Grade",
 
   // Buyer Context
@@ -45,7 +45,7 @@ const DEFAULT_DEAL = {
   cannibalisation: "Low",
   changeInLaw: "Standard protection clause",
   terminationTriggers: "Material adverse change, credit default, force majeure >12mo",
-  creditSupport: "Parent company guarantee (Equinor)",
+  creditSupport: "Parent company guarantee (Generator parent)",
   governingLaw: "English Law",
 
   // Financial Estimates
