@@ -4,8 +4,8 @@ const DEFAULT_DEAL = {
   // Project Details
   projectName: "North Sea Offshore Wind",
   technology: "Offshore Wind",
-  capacityMW: 400,
-  annualGenerationGWh: 1370,
+  capacityMW: 402,
+  annualGenerationGWh: 1400,
   location: "UK North Sea",
   codDate: "Q3 2027",
 
@@ -18,10 +18,10 @@ const DEFAULT_DEAL = {
   settlementFrequency: "Monthly",
 
   // Counterparties
-  generatorName: "{Generator name}",
-  generatorParent: "{Generator Parent}",
+  generatorName: "Danske Commodities",
+  generatorParent: "Equinor",
   generatorCreditRating: "Investment Grade (A-)",
-  offtakerName: "{Offtaker}",
+  offtakerName: "Octopus Energy",
   offtakerCreditRating: "Investment Grade",
 
   // Buyer Context
@@ -45,7 +45,7 @@ const DEFAULT_DEAL = {
   cannibalisation: "Low",
   changeInLaw: "Standard protection clause",
   terminationTriggers: "Material adverse change, credit default, force majeure >12mo",
-  creditSupport: "Parent company guarantee (Generator parent)",
+  creditSupport: "Parent company guarantee (Equinor)",
   governingLaw: "English Law",
 
   // Financial Estimates
@@ -626,7 +626,7 @@ export default function PPABriefGenerator() {
       </div>
 
       {/* Body */}
-      <div style={{ display: "flex", height: "calc(100vh - 56px)" }}>
+      <div style={{ display: "flex", minHeight: "calc(100vh - 56px)" }}>
         {/* Inputs Panel */}
         {showInputs && (
           <div style={{
@@ -636,7 +636,10 @@ export default function PPABriefGenerator() {
             borderRight: "1px solid #E2E8F0",
             display: "flex",
             flexDirection: "column",
-            overflow: "hidden",
+            position: "sticky",
+            top: 56,
+            height: "calc(100vh - 56px)",
+            overflow: "auto",
           }}>
             <div style={{ padding: "14px 16px 10px", borderBottom: "1px solid #E2E8F0" }}>
               <div style={{ fontSize: 14, fontWeight: 700, color: "#0B1D3A" }}>Deal Inputs</div>
@@ -647,14 +650,14 @@ export default function PPABriefGenerator() {
         )}
 
         {/* Preview */}
-        <div style={{ flex: 1, overflow: "auto", padding: "24px", display: "flex", justifyContent: "center" }}>
+        <div style={{ flex: 1, padding: "24px", display: "flex", justifyContent: "center" }}>
           <div style={{
             width: "100%",
             maxWidth: 820,
             background: "#fff",
             borderRadius: 4,
             boxShadow: "0 1px 8px rgba(0,0,0,0.08), 0 4px 24px rgba(0,0,0,0.04)",
-            overflow: "hidden",
+            marginBottom: 24,
           }}>
             {view === "board" ? <BoardView d={deal} /> : <RiskView d={deal} />}
           </div>
