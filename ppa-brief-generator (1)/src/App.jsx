@@ -18,10 +18,10 @@ const DEFAULT_DEAL = {
   settlementFrequency: "Monthly",
 
   // Counterparties
-  generatorName: "Danske Commodities",
-  generatorParent: "Equinor",
+  generatorName: "Grainge Commodities",
+  generatorParent: "Farther inc",
   generatorCreditRating: "Investment Grade (A-)",
-  offtakerName: "Octopus Energy",
+  offtakerName: "Roman Energy",
   offtakerCreditRating: "Investment Grade",
 
   // Buyer Context
@@ -45,7 +45,7 @@ const DEFAULT_DEAL = {
   cannibalisation: "Low",
   changeInLaw: "Standard protection clause",
   terminationTriggers: "Material adverse change, credit default, force majeure >12mo",
-  creditSupport: "Parent company guarantee (Equinor)",
+  creditSupport: "Parent company guarantee (Farther)",
   governingLaw: "English Law",
 
   // Financial Estimates
